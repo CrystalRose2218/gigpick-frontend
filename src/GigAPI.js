@@ -4,8 +4,9 @@ import Toast from './Toast'
 
 class GigAPI {
 
-  // POST Create new GIg object ---------------------------------------------------
+  // POST: Create new Gig object ---------------------------------------------------
   async newGig(formData){
+    
     // send fetch request
     const response = await fetch(`${App.apiBase}/gigs`, {
       method: 'POST',

@@ -240,6 +240,25 @@ a {
   z-index: 1;
 }
 
+// Add Gig Page ---------------------
+.page-form{
+  margin: 1em auto;
+  text-align: center;
+
+  .multi{
+    display: flex;
+    sl-input {
+      margin-right: 2em;
+      width: calc(35% - 2em);
+    }
+  }
+}
+
+.input-group {
+  margin: 1em 2em;
+  text-align: left;
+}
+
 // RESPONSIVE - MOBILE -------------------
 @media only screen and (max-width: 1200px){ 
 
