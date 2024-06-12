@@ -76,11 +76,14 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         align-items: center;
       }
       
-
       .app-header-main {
+        position: relative;
         flex-grow: 1;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
+        margin-right: 5vw;
+        padding-top: 1em;
       }
 
       .app-header-main::slotted(h1){
@@ -96,11 +99,15 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         display: inline-block;        
       }
 
-      .app-logo img {
-        width: 90px;
+      .logo {
+        height: 90px;
+        position: absolute;
+        top: 0.9em;
+        left: 2em;
       }
       
       .hamburger-btn::part(base) {
+        display: none;
         color: #fff;
       }
 
@@ -142,6 +149,13 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         left: 1.5em;
       }
 
+      /* Helps to keep title from overlapping logo */
+      .empty {
+        width: 240px;
+        margin-left: 1.5em;
+        height:100%;
+      }
+
       .page-title {
         color: var(--app-header-txt-color);
         margin-right: 0.5em;
@@ -158,21 +172,34 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       /* RESPONSIVE - MOBILE ------------------- */
       @media all and (max-width: 768px){       
         
-        .app-top-nav {
+        .app-top-nav, .page-title, .empty {
           display: none;
         }
+
+        .app-header-main {
+          flex-direction: row-reverse;
+        }
+
+        .hamburger-btn::part(base) {
+          display: block;
+        } 
       }
 
     </style>
 
     <header class="app-header">
-      <sl-icon-button class="hamburger-btn" name="list" @click="${this.hamburgerClick}" style="font-size: 1.5em;"></sl-icon-button>       
       
       <div class="app-header-main">
-        ${this.title ? html`
-          <h1 class="page-title">${this.title}</h1>
-        `:``}
-        <slot></slot>
+        <div class="empty"> </div>
+        <img class="logo" src="images/Header-logo.svg" alt="logo"> 
+        <div> 
+          ${this.title ? html`
+            <h1 class="page-title">${this.title}</h1>
+          `:``}
+          <sl-icon-button class="hamburger-btn" name="list" @click="${this.hamburgerClick}" style="font-size: 1.5em;"></sl-icon-button>
+      </div>
+
+      <slot></slot>
       </div>
 
       <nav class="app-top-nav">
@@ -201,14 +228,13 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       <nav class="app-side-menu-items">
         <a href="/" @click="${this.menuClick}">Home</a>
         <a href="/gigs" @click="${this.menuClick}">Find Gigs</a>
-        <a href="/venues" @click="${this.menuClick}">Find Venues</a>
-        <a href="/profile" @click="${this.menuClick}">Profile</a>
-        <a href="#" @click="${() => Auth.signOut()}">Sign Out</a>
         ${(this.user.accessLevel == 2) ? html`
           <a href="/addGig" @click="${this.menuClick}">Create Gig Listing</a>
           ` : html`
-          
           `}
+        <a href="/profile" @click="${this.menuClick}">Profile</a>
+        <a href="#" @click="${() => Auth.signOut()}">Sign Out</a>
+        
       </nav>  
     </sl-drawer>
     `

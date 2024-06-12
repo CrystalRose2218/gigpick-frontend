@@ -44,7 +44,7 @@ class SignUpView{
             <div class="input-group">
               <sl-input name="password" type="password" placeholder="Password" required toggle-password></sl-input>
             </div>
-            <div class="input-group">
+            <div class="input-group" style="margin-bottom:2em;">
               <sl-select name="accessLevel" placeholder="I am a ...">
                 <sl-option value="1">Musician</sl-option>
                 <sl-option value="2">Music Venue</sl-option>

@@ -34,7 +34,7 @@ class SignInView {
               <sl-input name="email" type="email" placeholder="Email" required></sl-input>
             </div>
             <div class="input-group">
-              <sl-input name="password" type="password" placeholder="Password" required toggle-password></sl-input>
+              <sl-input name="password" type="password" placeholder="Password" required toggle-password style="margin-bottom: 2em;"></sl-input>
             </div>
             <sl-button type="submit" variant="primary" class="submit-btn" style="width: 100%;">Sign In</sl-button>
           </form>

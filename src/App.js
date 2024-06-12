@@ -7,8 +7,8 @@ class App {
   constructor(){
     this.name = "Gigpick"
     this.version = "1.0.0"
-    //this.apiBase = 'http://localhost:3000'
-    this.apiBase = 'https://cpearce-gigpick-backend.onrender.com'
+    this.apiBase = 'http://localhost:3000'
+    //this.apiBase = 'https://cpearce-gigpick-backend.onrender.com'
     this.rootEl = document.getElementById("root")
     this.version = "1.0.0"
   }
