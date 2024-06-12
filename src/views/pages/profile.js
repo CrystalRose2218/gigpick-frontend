@@ -33,7 +33,7 @@ class ProfileView {
     const template = html`
       <va-app-header title="Profile" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content calign">    
-        <div class="user-profile">    
+        <div class="profile">    
           ${Auth.currentUser && Auth.currentUser.avatar ? html`
             <sl-avatar style="--size: 200px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
           `:html`

@@ -129,12 +129,65 @@ a {
   }
 }
 
-// available gigs page ----------------
-
+// home page -------------------
 .container {
   display: flex;
   flex-direction: row-reverse;
 }
+
+.applied-gigs-section {
+  flex: 100%;
+}
+
+.home .gigs-grid .gig-card {
+  width: calc(49% - 1em);
+}
+
+.user-profile {
+  background-color: #fff;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  color: #000;
+  margin-left: 1.5em;
+  margin-top: 7em;
+  height: 100%;
+  flex: 25%;
+  max-width: 300px;
+  text-align: center;
+  //display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  sl-avatar {
+    margin-bottom: 3em;
+    --size: 5.6em;
+  }
+  div {
+    //position:relative;
+    margin-bottom: 2em;
+    //flex: 0 0 200px;
+    
+  }
+  .image {
+    top: -8em;
+    margin-bottom: 0;
+    border-radius: 45%;
+    background-color: #fff;
+    border: 5px solid #fff;
+  }
+}
+
+
+
+
+// profile page ------------------
+.applied-gigs-section {
+  margin-top: 3em;
+  h2, .gig-card {
+    text-align: left;
+  }
+}
+
+// available gigs page ----------------
 
 .filter-menu {
   flex: 25%;

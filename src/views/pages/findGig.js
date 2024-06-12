@@ -51,7 +51,7 @@ class GigView {
       // today[0] = day, today[1] = month - 1
       let today = [(d.getDate()),(d.getMonth())]
 
-      //gig.date[0] = day gig.date[1] = month
+      //gig.date[0] = day, gig.date[1] = month
       
       // filter by today
       if (match == "today") {
@@ -60,7 +60,7 @@ class GigView {
       }
 
       // filter by this week
-      // NOTE this won't work if todays date is close to the end of the month)
+      // NOTE this won't work if todays date is close to the end of the month :( 
       if (match == "week") {
         console.log(match, today)
         filteredGigs = this.gigs.filter(gig => gig.date.split('/')[0] >= today[0] && gig.date.split('/')[0] <= today[0] + 7)
