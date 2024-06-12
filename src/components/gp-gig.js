@@ -158,8 +158,10 @@ customElements.define('gp-gig', class Gig extends LitElement {
 
         .wrap h2 {
           color: #fff;
+          font-family: var(--brand-font-button);
+          font-size: 1.7em;
           position: absolute;
-          top: -130%;
+          top: -150%;
           text-shadow: 3px 3px 5px black;
         }
 
@@ -170,6 +172,13 @@ customElements.define('gp-gig', class Gig extends LitElement {
         .wrap h3 {
             margin-top: 0;
             text-align: right;
+            font-family: var(--brand-font-button);
+            color: var(--brand-color-indigo);
+        }
+
+        .gig-body p {
+          font-family: var(--brand-font-tags);
+          color: var(--brand-color-purp);
         }
 
         .venue {

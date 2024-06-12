@@ -51,8 +51,8 @@ class EditProfileView {
         ${(this.user == null) ? html`
           <sl-spinner></sl-spinner>
         `:html`
-          <p>Updated: ${moment(Auth.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a')}</p>
           <form class="page-form input-validation-required" @submit=${this.updateProfileSubmitHandler.bind(this)}>
+            <p>Updated: ${moment(Auth.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a')}</p>
             <div class="input-group">
               <sl-input type="text" name="firstName" value="${this.user.firstName}" placeholder="First Name"></sl-input>
             </div>
@@ -74,7 +74,7 @@ class EditProfileView {
                 <input type="file" name="avatar" />
               `}
             </div>
-            <sl-button variant="primary" type="submit" class="submit-btn square">Update Profile</sl-button>
+            <sl-button size="large" style="width: 60%" variant="primary" type="submit" class="submit-btn square">Update Profile</sl-button>
           </form>
         `}
       </div>

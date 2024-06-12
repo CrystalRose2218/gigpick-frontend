@@ -119,7 +119,9 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
 
       .app-top-nav a {
         display: inline-block;
-        padding: .8em;
+        font-family: var(--brand-font-sub-heading);
+        font-size: 1.3em;
+        padding: 1em;
         text-decoration: none;
         color: #fff;
       }
@@ -136,6 +138,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       .app-side-menu-items a {
         display: block;
         padding: .5em;
+        font-family: var(--brand-font-sub-heading);
         text-decoration: none;
         font-size: 1.3em;
         color: #333;
@@ -158,6 +161,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
 
       .page-title {
         color: var(--app-header-txt-color);
+        font-family: rift, monospace;
         margin-right: 0.5em;
         margin-bottom: 0em;
         font-size: var(--app-header-title-font-size);

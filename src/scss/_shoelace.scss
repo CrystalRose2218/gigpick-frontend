@@ -6,24 +6,57 @@ sl-dialog::part(title){
   font-size: 1.6em;
 }
 
-// buttons
+//sl-selection
+sl-select::part(display-input) {
+  font-family: var(--brand-font-sub-heading);
+}
+
+sl-option::part(base) {
+  font-family: var(--brand-font-sub-heading);
+  
+}
+
+// Main buttons
 sl-button::part(base){
   color: var(--brand-color-indigo);
   transition: var(--sl-transition-fast) transform ease-in;
+  font-family: var(--brand-font-button);
+  font-size: 1.6em;
 }
 
+// Fitler buttons
 sl-button.filterbtn::part(base){
   color: #fff;
   background-color: var(--brand-color-blue);
 }
 
+sl-button.inactive::part(base) {
+  font-family: var(--brand-font-tags);
+  font-weight: 600;
+  font-size: 1em;
+  border: 2px solid var(--brand-color-blue);
+}
+
+// support button class
 sl-button.square::part(base) {
   border-radius: 0;
 }
 
+// CSS transition
 sl-button::part(base):hover {
   transform: scale(1.02);
   border-color: var(--brand-color-lightpurp);
+}
+
+// INPUT
+sl-input::part(input) {
+  color: var(--brand-color-purp);
+}
+
+// Text area
+sl-textarea::part(textarea) {
+  font-family: var(--brand-font-sub-heading);
+  color: var(--brand-color-purp);
 }
 
 // RESPONSIVE - MOBILE -------------------

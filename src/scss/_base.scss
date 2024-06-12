@@ -22,11 +22,28 @@ body {
 h1,h2,h5,h6 {
   margin: 0 0 .5em;
   color: var(--heading-color);
+  font-family: var(--brand-font-header);
+  font-weight: var(--brand-font-weight-header);
+  font-size: 2.5em;
 }
 
+h2 {
+  font-family: var(--brand-font-sub-heading);
+  font-size: 2em;
+}
+
+
 h3 {
-  margin: 0 0 .5em;
-  color: #000;
+  font-family: var(--brand-font-sub-heading);
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0.5em 0;
+  color: var(--brand-color-indigo);
+}
+
+h4 {
+  font-family: var(--brand-font-tags);
+  font-size: 1.2em;
 }
 
 // links ---------------
@@ -147,9 +164,22 @@ a {
   justify-content: center;
   h1 {
     color: #000;
+    font-family: var(--brand-font-sub-heading);
     font-size: 4em;
   }
 }
+
+.input-group {
+  sl-input::part(form-control-label) {
+    font-family: var(--brand-font-header);
+  }
+
+  sl-input::part(base){
+    font-family: var(--brand-font-placeholder);
+    color: var(--brand-color-lightpurp);
+  }
+}
+
 
 .signup-box {
   height: 100%;

@@ -16,12 +16,14 @@
   --brand-color-purp: #6559A6;
   --brand-color-indigo: #201e5b;
   --brand-color-blue: #00b8f1;
-
-  /*
-  // fonts
-  --brand-header-font: "obviously-wide, sans-serif";
-  --brand-header-weight: 600; 
-  --brand-button-font: "rift, sans-serif" */
+  
+  // fonts !! these variables dont seem to work tho...
+  --brand-font-header: obviously-wide, sans-serif;
+  --brand-font-tags: obviously-medium, sans-serif;
+  --brand-font-weight-header: 600; 
+  --brand-font-button: rift, sans-serif; 
+  --brand-font-sub-heading: courier-std, monospace;
+  --brand-font-placeholder: courier-std, monospace;
   
   // app header
   --app-header-height: 60px;

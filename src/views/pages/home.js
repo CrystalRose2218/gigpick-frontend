@@ -54,7 +54,7 @@ class HomeView {
             </div>
             
             <div>
-              <sl-button variant="primary" style="border-radius:0;" @click=${() => gotoRoute('/profile')}>VIEW PROFILE</sl-button>
+              <sl-button class="square" size="medium" variant="primary" style="border-radius:0; width: 80%" @click=${() => gotoRoute('/profile')}>VIEW PROFILE</sl-button>
             </div>
           </div>
           

@@ -137,33 +137,33 @@ class GigView {
             <h3> Filters </h3>
               <div>
                 <h4 style="text-align: left; margin-left: 1em;"> Genre </h4>
-                <sl-button pill size="small" data-field="category" data-match="rock" @click=${this.handleFilterBtn.bind(this)}> Rock </sl-button>
-                <sl-button pill size="small" data-field="category" data-match="jazz" @click=${this.handleFilterBtn.bind(this)}> Jazz </sl-button>
-                <sl-button pill size="small" data-field="category" data-match="punk" @click=${this.handleFilterBtn.bind(this)}> Punk </sl-button>
-                <sl-button pill size="small" data-field="category" data-match="edm" @click=${this.handleFilterBtn.bind(this)}> Electronic </sl-button>
-                <sl-button pill size="small" data-field="category" data-match="classical" @click=${this.handleFilterBtn.bind(this)}> Classical </sl-button>
-                <sl-button pill size="small" data-field="category" data-match="pop" @click=${this.handleFilterBtn.bind(this)}> Pop </sl-button>
-                <sl-button pill size="small" data-field="category" data-match="indie" @click=${this.handleFilterBtn.bind(this)}> Indie/ Alt </sl-button>
-                <sl-button pill size="small" data-field="category" data-match="country" @click=${this.handleFilterBtn.bind(this)}> Country </sl-button>
-                <sl-button pill size="small" data-field="category" data-match="hip hop" @click=${this.handleFilterBtn.bind(this)}> Hip Hop </sl-button>
-                <sl-button pill size="small" data-field="category" data-match="metal" @click=${this.handleFilterBtn.bind(this)}> Metal </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="rock" @click=${this.handleFilterBtn.bind(this)}> Rock </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="jazz" @click=${this.handleFilterBtn.bind(this)}> Jazz </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="punk" @click=${this.handleFilterBtn.bind(this)}> Punk </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="edm" @click=${this.handleFilterBtn.bind(this)}> Electronic </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="classical" @click=${this.handleFilterBtn.bind(this)}> Classical </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="pop" @click=${this.handleFilterBtn.bind(this)}> Pop </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="indie" @click=${this.handleFilterBtn.bind(this)}> Indie/ Alt </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="country" @click=${this.handleFilterBtn.bind(this)}> Country </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="hip hop" @click=${this.handleFilterBtn.bind(this)}> Hip Hop </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="category" data-match="metal" @click=${this.handleFilterBtn.bind(this)}> Metal </sl-button>
               </div>
               <div>
                 <h4 style="text-align: left; margin-left: 1em;"> Location </h4>
-                <sl-button pill size="small" data-field="location" data-match="Northbridge" @click=${this.handleFilterBtn.bind(this)}> Northbridge </sl-button>
-                <sl-button pill size="small" data-field="location" data-match="Perth" @click=${this.handleFilterBtn.bind(this)}> Perth </sl-button>
-                <sl-button pill size="small" data-field="location" data-match="Scarborough" @click=${this.handleFilterBtn.bind(this)}> Scarborough </sl-button>
-                <sl-button pill size="small" data-field="location" data-match="Fremantle" @click=${this.handleFilterBtn.bind(this)}> Fremantle </sl-button>
-                <sl-button pill size="small" data-field="location" data-match="Joondalup" @click=${this.handleFilterBtn.bind(this)}> Joondalup </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="location" data-match="Northbridge" @click=${this.handleFilterBtn.bind(this)}> Northbridge </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="location" data-match="Perth" @click=${this.handleFilterBtn.bind(this)}> Perth </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="location" data-match="Scarborough" @click=${this.handleFilterBtn.bind(this)}> Scarborough </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="location" data-match="Fremantle" @click=${this.handleFilterBtn.bind(this)}> Fremantle </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="location" data-match="Joondalup" @click=${this.handleFilterBtn.bind(this)}> Joondalup </sl-button>
               </div>
               <div>
                 <h4 style="text-align: left; margin-left: 1em;"> Date </h4>
-                <sl-button pill size="small" data-field="date" data-match="today" @click=${this.handleFilterBtn.bind(this)}> Today </sl-button>
-                <sl-button pill size="small" data-field="date" data-match="week" @click=${this.handleFilterBtn.bind(this)}> This Week </sl-button>
-                <sl-button pill size="small" data-field="date" data-match="month" @click=${this.handleFilterBtn.bind(this)}> This Month </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="date" data-match="today" @click=${this.handleFilterBtn.bind(this)}> Today </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="date" data-match="week" @click=${this.handleFilterBtn.bind(this)}> This Week </sl-button>
+                <sl-button class="inactive" pill size="small" data-field="date" data-match="month" @click=${this.handleFilterBtn.bind(this)}> This Month </sl-button>
               </div>
               <div>
-                <sl-button class="square" size="medium" @click=${this.clearAllFilters.bind(this)}> Clear Filters </sl-button>
+                <sl-button class="square" size="medium" style="margin-top:1em;" @click=${this.clearAllFilters.bind(this)}> Clear Filters </sl-button>
               </div>
             </div>
           <div class="gigs-grid">
