@@ -191,7 +191,9 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       
       <div class="app-header-main">
         <div class="empty"> </div>
-        <img class="logo" src="images/Header-logo.svg" alt="logo"> 
+        <a href="/" @click="${anchorRoute}">
+          <img class="logo" src="images/Header-logo.svg" alt="logo">
+        </a> 
         <div> 
           ${this.title ? html`
             <h1 class="page-title">${this.title}</h1>
@@ -223,7 +225,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       </nav>
     </header>
 
-    <sl-drawer class="app-side-menu" placement="start" class="drawer">
+    <sl-drawer class="app-side-menu" class="drawer">
       <img class="app-side-menu-logo" src="/images/header-logo-black.svg">
       <nav class="app-side-menu-items">
         <a href="/" @click="${this.menuClick}">Home</a>

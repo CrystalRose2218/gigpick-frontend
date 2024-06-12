@@ -128,7 +128,7 @@ class GigView {
   render(){
     const template = html`
       <va-app-header title="Browse Gigs" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
-      <div class="page-content" style="padding: 3em;">        
+      <div class="page-content">        
         
         <h1>Available Gigs</h1>
 

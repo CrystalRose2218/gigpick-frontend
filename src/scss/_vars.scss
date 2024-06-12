@@ -5,9 +5,8 @@
   --base-txt-color: #fff;
   --heading-color: #fff;
   --base-font-family: 'Work Sans', sans-serif;
-  --body-bg: var(--brand-color-indigo);
+  --body-bg: linear-gradient(to bottom right, var(--brand-color-indigo) , var(--brand-color-purp), var(--brand-color-purp), var(--brand-color-blue));
   
-
   // colors  
   $brand-color: #AFD140;
   --brand-color: #{$brand-color};
@@ -15,9 +14,14 @@
   --brand-color-green: #AFD140;
   --brand-color-lightpurp: #A293C6;
   --brand-color-purp: #6559A6;
-  --brand-color-indigo: #201E5B;
-  --brand-color-blue: #00B8F1;
+  --brand-color-indigo: #201e5b;
+  --brand-color-blue: #00b8f1;
 
+  /*
+  // fonts
+  --brand-header-font: "obviously-wide, sans-serif";
+  --brand-header-weight: 600; 
+  --brand-button-font: "rift, sans-serif" */
   
   // app header
   --app-header-height: 60px;

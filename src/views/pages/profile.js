@@ -45,38 +45,42 @@ class ProfileView {
           <p>Updated: ${moment(Auth.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a')}</p>
 
           ${Auth.currentUser.bio ? html`
-            <h3> Bio </h3>
+            <h3 style="color: #fff"> Bio </h3>
             <p> ${Auth.currentUser.bio} </p>
           ` : html`
           `}
           <sl-button @click=${()=> gotoRoute('/editProfile')}>Edit Profile</sl-button>
         </div>
 
-        <div class="applied-gigs-section">
-            <h1> Your Applied Gigs </h1>
-            <div class="gigs-grid">
-              
-              ${this.appliedGigs == null ? html`
-                <sl-spinner></sl-spinner>
-              ` : html`
-                
-              ${this.appliedGigs.map(gig => html`
-                <gp-gig class="gig-card"
-                  id="${gig._id}"
-                  title="${gig.title}"
-                  description="${gig.description}"
-                  venue="${JSON.stringify(gig.venue)}"
-                  image="${gig.image}"
-                  time="${gig.time}"
-                  date="${gig.date}"
-                  category="${gig.category}"
-                >        
-                </gp-gig>
+        ${Auth.currentUser.accessLevel == 1 ? html`
 
-                `)}
-              `}
-            </div>
-        </div>
+          <div class="applied-gigs-section">
+              <h1> Your Applied Gigs </h1>
+              <div class="gigs-grid">
+                
+                ${this.appliedGigs == null ? html`
+                  <sl-spinner></sl-spinner>
+                ` : html`
+                  
+                ${this.appliedGigs.map(gig => html`
+                  <gp-gig class="gig-card"
+                    id="${gig._id}"
+                    title="${gig.title}"
+                    description="${gig.description}"
+                    venue="${JSON.stringify(gig.venue)}"
+                    image="${gig.image}"
+                    time="${gig.time}"
+                    date="${gig.date}"
+                    category="${gig.category}"
+                  >        
+                  </gp-gig>
+
+                  `)}
+                `}
+              </div>
+          </div>
+        `: html`
+        `}
 
       </div>      
     `

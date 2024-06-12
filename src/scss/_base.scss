@@ -8,11 +8,13 @@
 body {
   padding: 0;  
   margin: 0;
+  height: 100vh;
   color: var(--base-txt-color);
   font-family: var(--base-font-family);
   font-weight: 300;
   background: var(--body-bg);
-  height: 100vh;
+  //background-repeat: no-repeat;
+  //background-attachment: fixed;
 }
 
 
@@ -29,7 +31,8 @@ h3 {
 
 // links ---------------
 a {
-  color: var(--link-color);
+  //color: var(--link-color);
+  font-weight: bolder;
 }
 
 
@@ -94,7 +97,8 @@ a {
   right: 0;
   bottom: 0;
   overflow-y: scroll;
-  padding: 3em 6em;
+  padding: 6em;
+  background-color: rgba(22, 14, 76, 0.6);
   &.no-pad {
     padding: 0;
   }
@@ -106,17 +110,60 @@ a {
   justify-content: center;
 }
 
+.content-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 // sign in + sign up pages ----------
+.full-bg{
+  background-image: url('/static/images/sign-in-bg-pic.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+}
+
+.overlay{
+  background-color: rgba(22, 14, 76, 0.5);
+  .page-content {
+    top: 0;
+  }
+}
+
 .signinup-box,
-.signup-box {  
-  max-width: 320px;
+.signup-box {
+  background-color: #fff;
+  color: #000;  
+  padding: 2em;
+  height: 70%;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  justify-content: center;
+  h1 {
+    color: #000;
+    font-size: 4em;
+  }
+}
+
+.signup-box {
+  height: 100%;
 }
 
 .signinup-logo {
-  width: 200px;
+  width: 350px;
   margin-bottom: 1em;
 }
+
+.input-validation-required sl-button {
+  margin: 1em 0;
+}
+
 
 // guide page ---------------
 .guide-step {
@@ -128,6 +175,7 @@ a {
     height: auto;
   }
 }
+
 
 // home page -------------------
 .container {
@@ -255,30 +303,61 @@ a {
 }
 
 .input-group {
-  margin: 1em 2em;
+  margin: 2em 2em;
   text-align: left;
 }
 
 // RESPONSIVE - MOBILE -------------------
 @media only screen and (max-width: 1200px){ 
 
-  .gigs-grid {
-
-    .gig-card {
+  .gigs-grid .gig-card {
       width: calc(49% - 1em);
-  }}
+  }
+
+  .content-split{
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    .signinup-box {
+      //height: 50%;
+      width: 85%;
+    }
+    .signinup-logo {
+      height: 80%;
+    }
+  }
+
+  .filler {
+    max-height: 25%;
+  
+    p {
+      display: none;
+    }
+  }
+
+  .home .gigs-grid .gig-card {
+    width: calc(99% - 1em);
+  }
+  
 }
 
 @media all and (max-width: 768px){ 
 
   .page-content {
-    padding: 2em;
+    top: --app-header-height;
+    padding: 3em;
+    //overflow-y: scroll;
   }
 
   .signinup-box {
     width: 90%;
     max-width: none;
   }
+
+  .user-profile{
+    display: none;
+  }
+
   .gigs-grid {
 
     .gig-card {
